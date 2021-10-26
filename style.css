@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css?family=Archivo+Narrow:400,400i,500,500i,600,600i,700,700i");
 
 :root {
-  --primary_color: #5ab9ea;
-  --sec_color: #17252A;
+  --primary_color: #FAC306;
+  --sec_color: #FFFFFF;
 }
 
 /* GENERAL */
@@ -17,7 +17,11 @@
 html,
 body {
   font-family: 'Roboto', sans-serif;
-  background-image: url(img/phil-11.jpg);
+  background-color: black;
+  background-image: linear-gradient(rgba(22, 22, 22, 0.5), rgba(22, 22, 22, 0.5)), url('img/logo/logo-white-transparent.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
   height: 100%;
 }
 
@@ -51,10 +55,12 @@ h2, h3 {
 }
 
 .header {
-  background-color: #2b7a78;
-  background-position: top;
+  background-image: url(img/phil-13.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
   padding: 1.2em 0.7em;
-  box-shadow: 0px 10px 8px 10px #0d347c91;
+  box-shadow: 0px 5px 10px 2px var(--sec_color);
 }
 
 .logo {
@@ -67,11 +73,11 @@ h2, h3 {
   margin-bottom: 0.5em;
   text-transform: uppercase;
   font-weight: 700;
-  color: #FEFFFF;
+  color: var(--primary_color);
 }
 
 .logo span {
-  color: #DEF2F1;
+  color: var(--sec_color);
   border-bottom: 2px var(--primary_color) solid;
   border-bottom-right-radius: 10px;
 }
@@ -91,7 +97,7 @@ h2, h3 {
 .navbar-navigation-links li a{
   font-size: 1rem;
   font-weight: 500;
-  color: var(--sec_color);
+  color: var(--primary_color);
   transition: 0.1s ease-in-out;
 }
 
@@ -102,14 +108,14 @@ h2, h3 {
 }
 
 .navbar-navigation-links .active a{
-  color: var(--primary_color);
+  color: var(--sec_color);
   padding-bottom: 0.1em;
   font-weight: 700;
   margin: 0.2em;
 }
 
 .navbar-navigation-links .active a:hover{
-  color: var(--primary_color);
+  color: var(--sec_color);
   cursor: default;
 }
 
@@ -121,7 +127,7 @@ h2, h3 {
 .navbar-social-links li a{
   font-size: 1.2rem;
   transition: 0.5s ease-in-out;
-  color: var(--sec_color);
+  color:var(--sec_color);
 }
 
 .navbar-social-links li a:hover{
@@ -130,10 +136,15 @@ h2, h3 {
 }
 
 .home-header .navbar-links .navbar-social-links li a {
-  color: rgb(202, 138, 17);
+  color: var(--sec_color);
 }
 
-.navigation {
+.home-header .navbar-links .navbar-social-links li a:hover {
+  font-size: 1.3rem;
+  color: var(--primary_color);
+}
+
+.navigation{
   display: flex;
   flex-direction: row;
   text-align: center;
@@ -202,8 +213,8 @@ h2, h3 {
 
 .heading-text p{
   text-align: center;
-  font-size: 0.7rem;
-  color: orange;
+  font-size: .9rem;
+  color: var(--sec_color);
 }
 
 
@@ -212,6 +223,7 @@ h2, h3 {
 
 .about-me {
   padding-bottom: 2em;
+  background-image: linear-gradient(rgba(22, 22, 22, 1), rgba(22, 22, 22, 1));
 }
 
 .about-me img {
@@ -226,10 +238,10 @@ h2, h3 {
 }
 
 .about-me p{
-  color: rgb(192, 188, 188);
+  color: var(--sec_color);
   font-family: "Archivo Narrow", sans-serif;
   text-align: justify;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.6em;
   margin-top: 0.8em;
@@ -321,7 +333,7 @@ h2, h3 {
 }
 
 .skills-items p {
-  color: rgb(192, 188, 188);
+  color: var(--sec_color);
   text-align: center;
   letter-spacing: 0.1rem;
   font-size: 0.9rem;
@@ -337,7 +349,7 @@ h2, h3 {
 }
 
 .contact-form{
-  background: #2b7a78;
+  background-image: linear-gradient(rgba(22, 22, 22, 0.8), rgba(22, 22, 22, 1));
   margin: 0 auto 2em;
   padding: 2em;
   text-align: center;
@@ -356,7 +368,7 @@ h2, h3 {
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .contact-form input:active,
@@ -390,6 +402,7 @@ h2, h3 {
 }
 
 .contact-info {
+  background-image: linear-gradient(rgba(22, 22, 22,0.8), rgba(22, 22, 22, 1));
   margin: 0 auto 2em;
   padding: 0.5em;
   text-align: center;
@@ -406,7 +419,7 @@ h2, h3 {
 
 .contact-info .contact-info-item i{
   font-size: 1.5rem;
-  color: rgb(192, 188, 188);
+  color: var(--sec_color);
   margin-right: 1em;
 }
 
@@ -420,7 +433,7 @@ h2, h3 {
 
 
 @media (min-width: 630px ){
-  
+
   .home-header #home-nav {
     display: flex;
     justify-content: space-evenly;
@@ -454,7 +467,7 @@ h2, h3 {
 }
 
 @media (min-width: 1030px ){
-  
+
   .navbar-links {
     flex-direction: row;
     justify-content: space-evenly;
